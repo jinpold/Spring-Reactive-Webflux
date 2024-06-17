@@ -1,0 +1,6 @@
+db.users.find({status:"A"})
+db.users.find({status:"A"} exit
+db.users.find()
+show collections;
+show dbs;
+use admin;
