@@ -55,7 +55,7 @@ public class JwtProvider {
                 .claims(extraClaims)
                 .subject(userDetails.getEmail())
                 .claim("roles", List.of("user"))
-                .expiration(Date.from(Instant.now().plusSeconds(isRefreshToken.equals("accessToken") ? refreshTokenExpiration : accessTokenExpiration)))
+                .expiration(Date.from(Instant.now().plusSeconds(isRefreshToken.equals("accessToken") ? accessTokenExpiration : refreshTokenExpiration )))
                 .signWith(getSigningKey(), Jwts.SIG.HS256)
                 .compact();
 
